@@ -1,18 +1,5 @@
-# Ignore docs files
-_gh_pages
-_site
-
 # Numerous always-ignore extensions
-*.diff
-*.err
-*.log
-*.orig
-*.rej
-*.swo
-*.swp
-*.vi
 *.zip
-*~
 
 # OS or Editor folders
 ._*
@@ -37,5 +24,3 @@ docker-compose.yml
 # Folders to ignore
 bower_components
 svg
-node_modules
-build

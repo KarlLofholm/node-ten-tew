@@ -2,7 +2,10 @@
 <html>
 
 <head>
-    <title>Getting Started</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Node Ten Tweets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css"
     />
     <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
@@ -17,13 +20,13 @@
             <div class="ui items">
                 <% for(var i=0; i<tweets.length; i++) {%>
                     <div class="item">
-                        <a class="ui tiny image">
-                <img src="<%= tweets[i].user.profile_image_url %>">
-            </a>
+                        <div class="ui tiny image">
+                            <img src="<%= tweets[i].user.profile_image_url %>">
+                        </div>
                         <div class="content">
-                            <a class="header">
+                            <div class="header">
                                 <%= tweets[i].user.name %>
-                            </a>
+                            </div>
                             <div class="description">
                                 <%= tweets[i].text %>
                             </div>
