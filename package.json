@@ -1,7 +1,7 @@
 {
     "name": "node-ten-tweets",
     "version": "0.1.5",
-    "description": "A sample Node.js app using Express 4",
+    "description": "A sample Node.js app using Express 4, npm twitter and semantic UI",
     "main": "index.js",
     "scripts": {
         "start": "node index.js"
@@ -18,7 +18,8 @@
     "keywords": [
         "node",
         "heroku",
-        "express"
+        "express",
+        "twitter"
     ],
     "license": "MIT"
 }
