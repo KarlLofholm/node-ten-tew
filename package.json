@@ -1,13 +1,12 @@
 {
     "name": "node-ten-tweets",
     "version": "0.1.5",
-    "description": "Small Node.js app for displaying 10 latest tweets for hashtag #Javascript.",
+    "description": "Small Node.js app for displaying 10 latest tweets based on a hashtag",
     "main": "index.js",
     "scripts": {
         "start": "node index.js"
     },
     "dependencies": {
-        "ejs": "^2.3.1",
         "express": "~4.9.x",
         "cors": "2.7.1",
         "twitter": "1.2.5"

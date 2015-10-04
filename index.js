@@ -8,30 +8,16 @@ var client = new twitter({
     access_token_key: process.env.TWITTER_ACCESS_TOKER_KEY,
     access_token_secret: process.env.TWITTER_ACCESS_TOKER_SECRET
 });
-var tweetList = [];
-var tweetQuery = "Javascript";
 
 app.set('port', (process.env.PORT || 5000));
 
-app.use(cors());
-app.use(express.static(__dirname + '/public'));
-
-// views is directory for all template files
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
-
-app.get('/', function(request, response) {
-    response.render('pages/index', {
-        tweetQuery: tweetQuery,
-        tweets: tweetList
+app.get('/:q', cors(), function(req, response) {
+    client.get('search/tweets', {
+        q: '#' + req.params.q,
+        count: 10,
+    }, function(error, tweets, res) {
+        response.send(tweets);
     });
-});
-
-client.get('search/tweets', {
-    q: '#' + tweetQuery,
-    count: 10,
-}, function(error, tweets, res) {
-    tweetList = tweets.statuses;
 });
 
 app.listen(app.get('port'), function() {
